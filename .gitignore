@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # yii console command
 /yii
 
@@ -31,3 +32,11 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+=======
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
+>>>>>>> dbc0041eda8dc61409bb320e591590cc05dad9c8
