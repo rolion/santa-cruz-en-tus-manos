@@ -69,4 +69,18 @@ class Inmuheble extends \yii\mongodb\ActiveRecord
             'uv' => 'Uv',
         ];
     }
+    public function buscarInmuheble(array $servicio, arrray $tipo){
+        $query = new Query;
+        // compose the query
+        $query->from('inmuheble');
+        foreach ($servicio as $key => $value) {
+            $query->orWhere(["servicio"=>$value]);
+        }
+        foreach ($tipo as $key => $value) {
+            $query->orWhere(["tipo"=>$value]);
+        }
+        // execute the query
+        $rows = $query->all();
+        return json_decode($rows();
+    }
 }
