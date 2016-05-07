@@ -5,11 +5,11 @@ return [
                 'class' => '\yii\mongodb\Connection',
                 //'dsn' => 'mongodb://@localhost:27017/mongotestdb',
                 'dsn'=> 'mongodb://localhost/database?connectTimeoutMS=300000',
-                'defaultDatabaseName' => 'mymongodb',
+                'defaultDatabaseName' => 'datahub',
             ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
+            'dsn' => 'mysql:host=localhost;dbname=hackaton',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
