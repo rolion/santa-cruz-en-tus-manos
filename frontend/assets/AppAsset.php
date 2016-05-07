@@ -16,10 +16,10 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
+
         'js/map.js',
         'js/cargarMapa.js',
-        
-
+        'js/GoogleMap.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
