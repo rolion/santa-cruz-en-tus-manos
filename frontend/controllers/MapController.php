@@ -1,6 +1,14 @@
 <?php
 namespace frontend\controllers;
 use Yii;
-class SiteController extends Controller{
-	
+
+use yii\web\Controller;
+
+class MapController extends Controller{
+
+
+
+	public function actionIndex(){
+		return $this->render('index');
+	}
 }
