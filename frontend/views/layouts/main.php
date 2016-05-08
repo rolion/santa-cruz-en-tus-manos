@@ -45,6 +45,8 @@ AppAsset::register($this);
               <ul class="nav navbar-nav">
                     <li role="presentation" class="active1"><a href="#/home">Inicio</a></li>
                     <li role="presentation"><a href="#/about">Acerca</a></li>
+                    <li role="presentation"><a href="">Rentar</a></li>
+                    <li role="presentation"><a href="">Ofertas</a></li>
                     
               </ul>
             </div><!-- /.navbar-collapse -->

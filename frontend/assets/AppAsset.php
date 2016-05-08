@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
         'js/map.js',
         'js/cargarMapa.js',
         'js/GoogleMap.js',
+        'js/mapaview.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
