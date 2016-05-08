@@ -3,7 +3,7 @@
 namespace frontend\models;
 
 use Yii;
-
+use yii\mongodb\Query;
 /**
  * This is the model class for collection "inmuheble".
  *
@@ -16,7 +16,7 @@ use Yii;
  * @property mixed $distrito
  * @property mixed $uv
  */
-class Inmuheble extends \yii\mongodb\ActiveRecord
+class Inmueble extends \yii\mongodb\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -68,5 +68,24 @@ class Inmuheble extends \yii\mongodb\ActiveRecord
             'distrito' => 'Distrito',
             'uv' => 'Uv',
         ];
+    }
+    public function buscarInmueble( $servicio, $tipo){
+        $query = new Query;
+        if(empty($servicio) && empty($tipo)){
+                return array();
+        }
+        $query->from('inmuheble');
+        if(!empty($servicio)){
+            foreach ($servicio as $key => $value) {
+            $query->orWhere(["servicio"=>$value]);
+            }    
+        }
+        if(!empty($tipo)){
+            foreach ($tipo as $key => $value) {
+                $query->orWhere(["tipo"=>$value]);
+            }    
+        }
+        $rows = $query->all();
+        return $rows;     
     }
 }

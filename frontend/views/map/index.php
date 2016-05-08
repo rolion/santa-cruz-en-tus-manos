@@ -20,7 +20,6 @@ use yii\bootstrap\ActiveForm;
 
 <div class="container-fluid">
   <div class="row content">
-
 <?php $form = ActiveForm::begin(['id' => 'prueba-form']); ?>
 	
 	<div class="col-sm-2 sidenav" style="float: left;">
@@ -28,27 +27,27 @@ use yii\bootstrap\ActiveForm;
 	    <div class="panel panel-success">
       		<div class="panel-heading"><h4>Servicios</h4></div>
 			    <div class="panel-body">			        
-			        <div class="checkbox">
-			            <label><input type="checkbox" name="servicio[]" id="servicio">Compra</label><br>
-			            <label><input type="checkbox" name="servicio[]" id="servicio">Alquiler</label><br>
-			            <label><input type="checkbox" name="servicio[]" id="servicio">Anticretico</label><br>
+			        <div id="servicio" class="checkbox">
+			            <label><input type="checkbox" name="servicio[]" value="Venta">Compra</label><br>
+			            <label><input type="checkbox" name="servicio[]" value="Alquiler">Alquiler</label><br>
+			            <label><input type="checkbox" name="servicio[]" value="Anticretico">Anticretico</label><br>
 			        </div>
 				</div>
     	</div>
     	<div class="panel panel-success">
       		<div class="panel-heading"><h4>Tipo de Inmueble</h4></div>
 			    <div class="panel-body">			        
-			        <div class="checkbox">
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Casa</label><br>
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Terreno</label><br>
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Apartamento</label><br>
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Departamento</label><br>
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Pieza</label><br>
-			            <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Negocio</label><br>
+			        <div id='tipo' class="checkbox">
+			            <label><input type="checkbox" name="tinmueble[]" value="Casa">Casa</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Terreno">Terreno</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Apartamento">Apartamento</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Departamento">Departamento</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Pieza">Pieza</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Negocio">Negocio</label><br>
 			        </div>			            
       			</div>
     	</div>
-    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar">
+    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar" >
     </div>
 
 <?php ActiveForm::end(); ?>
