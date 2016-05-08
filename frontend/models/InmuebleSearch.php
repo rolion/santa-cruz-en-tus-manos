@@ -5,12 +5,12 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Inmuheble;
+use frontend\models\Inmueble;
 
 /**
- * InmuhebleSearch represents the model behind the search form about `frontend\models\Inmuheble`.
+ * InmuebleSearch represents the model behind the search form about `frontend\models\Inmueble`.
  */
-class InmuhebleSearch extends Inmuheble
+class InmuebleSearch extends Inmueble
 {
     /**
      * @inheritdoc
@@ -40,7 +40,7 @@ class InmuhebleSearch extends Inmuheble
      */
     public function search($params)
     {
-        $query = Inmuheble::find();
+        $query = Inmueble::find();
 
         // add conditions that should always apply here
 

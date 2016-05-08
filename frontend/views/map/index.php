@@ -21,23 +21,23 @@ use yii\bootstrap\ActiveForm;
 <div class="container-fluid">
   <div class="row content">
 
-		<?php $form = ActiveForm::begin(['id' => 'prueba-form']); ?>
+		<?php $form = ActiveForm::begin(['id' => 'search-inmueble']); ?>
 			
 			<div class="col-sm-3 sidenav">
 		        <h3>Servicio</h3>
-		            <div class="checkbox">
-		                <label><input type="checkbox" name="servicio[]" id="servicio">Compra</label><br>
-		                <label><input type="checkbox" name="servicio[]" id="servicio">Alquiler</label><br>
-		                <label><input type="checkbox" name="servicio[]" id="servicio">Anticretico</label><br>
+		            <div id='servicio' class="checkbox">
+		                <label><input type="checkbox" name="servicio[]" value="Venta" >Compra</label><br>
+		                <label><input type="checkbox" name="servicio[]" value="Alquiler">Alquiler</label><br>
+		                <label><input type="checkbox" name="servicio[]" value="Anticretico" >Anticretico</label><br>
 		            </div>
 		        <h3>Tipo de Inmueble</h3>
-		            <div class="checkbox">
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Casa</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Terreno</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Apartamento</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Departamento</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Pieza</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" id="tinmueble">Negocio</label><br>
+		            <div id='tipo' class="checkbox">
+		                <label><input type="checkbox" name="tinmueble[]" value="Casa" >Casa</label><br>
+		                <label><input type="checkbox" name="tinmueble[]" value="Terreno" >Terreno</label><br>
+		                <label><input type="checkbox" name="tinmueble[]" value="Apartamento" >Apartamento</label><br>
+		                <label><input type="checkbox" name="tinmueble[]" value="Departamento" >Departamento</label><br>
+		                <label><input type="checkbox" name="tinmueble[]" value="Pieza" >Pieza</label><br>
+		                <label><input type="checkbox" name="tinmueble[]" value="Negocio" >Negocio</label><br>
 		            </div>
 
 		            <input type="button" onclick="cargarDatosMapa()" value="Activar Función">

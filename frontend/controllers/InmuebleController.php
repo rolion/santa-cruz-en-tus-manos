@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\Inmuheble;
-use frontend\models\InmuhebleSearch;
+use frontend\models\Inmueble;
+use frontend\models\InmuebleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * InmuhebleController implements the CRUD actions for Inmuheble model.
+ * InmuebleController implements the CRUD actions for Inmueble model.
  */
-class InmuhebleController extends Controller
+class InmuebleController extends Controller
 {
     /**
      * @inheritdoc
@@ -28,14 +28,21 @@ class InmuhebleController extends Controller
             ],
         ];
     }
-
+    public function actionInmueble(){
+        $model=new Inmueble();
+        $request = Yii::$app->request;
+        $servicio = $request->post('servicio');
+        $tipo = $request->post('tipo');
+        $response=$model->buscarInmueble($servicio,$tipo);
+        return json_encode($response);
+    }
     /**
-     * Lists all Inmuheble models.
+     * Lists all Inmueble models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new InmuhebleSearch();
+        $searchModel = new InmuebleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +52,7 @@ class InmuhebleController extends Controller
     }
 
     /**
-     * Displays a single Inmuheble model.
+     * Displays a single Inmueble model.
      * @param integer $_id
      * @return mixed
      */
@@ -57,13 +64,13 @@ class InmuhebleController extends Controller
     }
 
     /**
-     * Creates a new Inmuheble model.
+     * Creates a new Inmueble model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Inmuheble();
+        $model = new Inmueble();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => (string)$model->_id]);
@@ -75,7 +82,7 @@ class InmuhebleController extends Controller
     }
 
     /**
-     * Updates an existing Inmuheble model.
+     * Updates an existing Inmueble model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $_id
      * @return mixed
@@ -94,7 +101,7 @@ class InmuhebleController extends Controller
     }
 
     /**
-     * Deletes an existing Inmuheble model.
+     * Deletes an existing Inmueble model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $_id
      * @return mixed
@@ -107,15 +114,15 @@ class InmuhebleController extends Controller
     }
 
     /**
-     * Finds the Inmuheble model based on its primary key value.
+     * Finds the Inmueble model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $_id
-     * @return Inmuheble the loaded model
+     * @return Inmueble the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Inmuheble::findOne($id)) !== null) {
+        if (($model = Inmueble::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

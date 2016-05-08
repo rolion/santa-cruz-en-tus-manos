@@ -4,7 +4,9 @@ namespace frontend\controllers;
 
 use Yii;
 use frontend\models\Point;
+use frontend\models\Pointmongo;
 use frontend\models\PointSearch;
+use frontend\controllers\ServiceController;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -120,5 +122,14 @@ class PointController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    public function actionPuntosDistritos(){
+        $model=new Pointmongo();
+        $request = Yii::$app->request;
+        $distrito = $request->post('distrito');
+        $colegio=$model->obtenerPunto($distrito,ServiceController::COLEGIO);
+        $plaza=$model->obtenerPunto($distrito,ServiceController::PLAZA);
+        $hospital=$model->obtenerPunto($distrito,ServiceController::HOSPITAL);
+        return json_encode([$colegio,$plaza,$hospital]);
     }
 }
