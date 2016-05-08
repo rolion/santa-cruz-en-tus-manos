@@ -43,10 +43,10 @@ AppAsset::register($this);
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                    <li role="presentation" class="active1"><a href="#/home">Inicio</a></li>
-                    <li role="presentation"><a href="#/about">Acerca</a></li>
-                    <li role="persentation"><a href="">Rentar</a></li>
-                    <li role="presentation"><a href="">Ofertas</a></li>
+                    <li role="presentation" class="active1"><a href="/santa-cruz-en-tus-manos/frontend/web/index.php?r=site">Inicio</a></li>
+                    <li role="presentation"><a href="/santa-cruz-en-tus-manos/frontend/web/index.php?r=site/about">Acerca</a></li>
+                    <li role="persentation"><a href="/santa-cruz-en-tus-manos/frontend/web/index.php?r=inmueble/create">Registrar</a></li>
+                    <li role="presentation"><a href="/santa-cruz-en-tus-manos/frontend/web/index.php?r=map">Buscar</a></li>
                     
               </ul>
             </div><!-- /.navbar-collapse -->

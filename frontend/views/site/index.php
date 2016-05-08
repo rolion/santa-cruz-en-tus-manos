@@ -5,47 +5,23 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
     <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+        <div class="row" style="margin: 1.5em; padding:1.5em">
+            <div class="col-lg-12" style="background: #dff0d8">
+                <h2>Santa Cruz en tus manos</h2>   
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-12">
+                <p>Nuestro proyecto se encuentra orientado al área inmobiliaria y social.
+                Consta del desarrollo de una aplicación web desde dos enfoques
+                <ol>
+                    <li>cualquier usuario interesado en buscar un lugar donde vivir podrá ingresar a la aplicación web y visualizar en ella inmuebles con una breve descripción que estén disponibles a la venta, alquiler, o anticrético. El valor agregado que se le ofrece es que el podrá personalizar su búsqueda en base a sus necesidades o preferencias, por ejemplo a un usuario en el lugar que quiere vivir le puede interesar tener un colegio, una guardería y  un gimnacio cerca pero no asi un hospital. 
+                        Toda esta información la podrá filtrar y visualizar sobre mapas con sus respectivas ubicaciones.</li>
+                    <li>Cualquier persona que le interesa vender, alquilar, o dar en anticrético alguna propiedad, casa, departamento o pieza pueda registrarla en nuestra web, con una descripción, ubicación, y fotos.</li>
+                </ol> 
+                </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                
             </div>
         </div>
 
