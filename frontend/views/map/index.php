@@ -47,7 +47,7 @@ use yii\bootstrap\ActiveForm;
 			        </div>			            
       			</div>
     	</div>
-    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar">
+    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar" >
     </div>
 
 <?php ActiveForm::end(); ?>
