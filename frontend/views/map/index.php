@@ -14,7 +14,6 @@ use yii\bootstrap\ActiveForm;
     
   </head>
   <body>
-  <h1>Selección</h1>
 
 <!-- panel izquierdo  -->
 
@@ -47,7 +46,9 @@ use yii\bootstrap\ActiveForm;
 			        </div>			            
       			</div>
     	</div>
-    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar" >
+
+    	<input type="button" class="btn btn-success btn-block" onclick="cargarDatosMapa()" value="Buscar">
+
     </div>
 
 <?php ActiveForm::end(); ?>
