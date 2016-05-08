@@ -20,33 +20,37 @@ use yii\bootstrap\ActiveForm;
 
 <div class="container-fluid">
   <div class="row content">
+<?php $form = ActiveForm::begin(['id' => 'prueba-form']); ?>
+	
+	<div class="col-sm-2 sidenav" style="float: left;">
+	    
+	    <div class="panel panel-success">
+      		<div class="panel-heading"><h4>Servicios</h4></div>
+			    <div class="panel-body">			        
+			        <div id="servicio" class="checkbox">
+			            <label><input type="checkbox" name="servicio[]" value="Venta">Compra</label><br>
+			            <label><input type="checkbox" name="servicio[]" value="Alquiler">Alquiler</label><br>
+			            <label><input type="checkbox" name="servicio[]" value="Anticretico">Anticretico</label><br>
+			        </div>
+				</div>
+    	</div>
+    	<div class="panel panel-success">
+      		<div class="panel-heading"><h4>Tipo de Inmueble</h4></div>
+			    <div class="panel-body">			        
+			        <div id='tipo' class="checkbox">
+			            <label><input type="checkbox" name="tinmueble[]" value="Casa">Casa</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Terreno">Terreno</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Apartamento">Apartamento</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Departamento">Departamento</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Pieza">Pieza</label><br>
+			            <label><input type="checkbox" name="tinmueble[]" value="Negocio">Negocio</label><br>
+			        </div>			            
+      			</div>
+    	</div>
+    	<input type="button" class="btn btn-success btn-md" onclick="cargarDatosMapa()" value="Buscar">
+    </div>
 
-		<?php $form = ActiveForm::begin(['id' => 'search-inmueble']); ?>
-			
-			<div class="col-sm-3 sidenav">
-		        <h3>Servicio</h3>
-		            <div id='servicio' class="checkbox">
-		                <label><input type="checkbox" name="servicio[]" value="Venta" >Compra</label><br>
-		                <label><input type="checkbox" name="servicio[]" value="Alquiler">Alquiler</label><br>
-		                <label><input type="checkbox" name="servicio[]" value="Anticretico" >Anticretico</label><br>
-		            </div>
-		        <h3>Tipo de Inmueble</h3>
-		            <div id='tipo' class="checkbox">
-		                <label><input type="checkbox" name="tinmueble[]" value="Casa" >Casa</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" value="Terreno" >Terreno</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" value="Apartamento" >Apartamento</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" value="Departamento" >Departamento</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" value="Pieza" >Pieza</label><br>
-		                <label><input type="checkbox" name="tinmueble[]" value="Negocio" >Negocio</label><br>
-		            </div>
-
-		            <input type="button" onclick="cargarDatosMapa()" value="Activar Función">
-
-
-		    </div>
-
-		<?php ActiveForm::end(); ?>
-
+<?php ActiveForm::end(); ?>
 
     <div id="mapa">
     	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
