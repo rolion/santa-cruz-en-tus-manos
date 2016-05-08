@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Inmuheble */
 
-$this->title = 'Create Inmuheble';
-$this->params['breadcrumbs'][] = ['label' => 'Inmuhebles', 'url' => ['index']];
+$this->title = 'Create Inmueble';
+$this->params['breadcrumbs'][] = ['label' => 'Inmuebles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="inmuheble-create">

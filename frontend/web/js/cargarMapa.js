@@ -75,6 +75,19 @@ function initMap(marcadores){
           }); 
           break;
       }
+            google.maps.event.addListener(marker, 'mouseout', (function(marker, i) {
+      return function() {
+       
+        infowindow.close(); 
+      }
+    })(marker, i));
+      google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+      return function() {
+        infowindow.setContent('<h3>'+marcadores[i].nombre+'</h3>');
+       
+        infowindow.open(map, marker); 
+      }
+    })(marker, i));
 
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {

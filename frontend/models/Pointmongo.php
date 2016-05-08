@@ -94,7 +94,7 @@ class Pointmongo extends \yii\mongodb\ActiveRecord
     }
     public function obtenerPunto($distrito, $tipo){
         $query = new Query;
-        $query->from('pointmongo')->where(['distrito'=>$distrito,'type'=>$tipo])->limit(10);
+        $query->from('pointmongo')->where(['distrito'=>$distrito,'type'=>$tipo])->limit(150);
         // execute the query
         $rows = $query->all();
         return $rows;
