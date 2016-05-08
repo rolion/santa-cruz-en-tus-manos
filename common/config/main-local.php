@@ -4,7 +4,7 @@ return [
         'mongodb' => [
                 'class' => '\yii\mongodb\Connection',
                 //'dsn' => 'mongodb://@localhost:27017/mongotestdb',
-                'dsn'=> 'mongodb://192.168.100.172/database?connectTimeoutMS=300000',
+                'dsn'=> 'mongodb://localhost/database?connectTimeoutMS=300000',
                 'defaultDatabaseName' => 'mymongodb',
             ],
         'db' => [
